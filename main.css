@@ -1,0 +1,256 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #F2F2EF; /* основной фон */
+    color: #212517; /* тёмный текст */
+    text-align: center;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #212517;
+    margin-bottom: 15px;
+}
+
+/* Хедер */
+header {
+    background-color: #DED3A6;
+    padding: 15px 0;
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    color: #212517;
+}
+
+/* Навигация */
+nav a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #374709; /* зелёные ссылки */
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #374709;
+    color: #F2F2EF;
+}
+
+/* Основной контент */
+main {
+    margin: 40px auto;
+    max-width: 800px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    color: #212517;
+}
+
+/* Форма */
+form {
+    margin: 30px auto;
+    max-width: 400px;
+    text-align: left;
+    background: #F2F2EF;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #212517;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #DED3A6;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #212517;
+}
+
+input:focus {
+    outline: none;
+    border-color: #374709;
+    box-shadow: 0 0 6px #374709;
+}
+
+/* Кнопки */
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #374709; /* зелёные кнопки */
+    color: #F2F2EF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #212517; /* тёмный при наведении */
+    color: #F2F2EF;
+}
+
+/* Футер */
+footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #DED3A6;
+    color: #212517;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer hr {
+    width: 60%;
+    border: 0;
+    border-top: 1px solid #374709;
+    margin-bottom: 10px;
+}
+
+form {
+    max-width: 400px; /* чтобы форма не растягивалась слишком широко */
+    margin: 0 auto;   /* выравнивание по центру */
+    padding: 20px;
+    background-color: #DED3A6; /* фон формы для выделения */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #212517;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="submit"] {
+    width: 100%;         /* поле растягивается ровно на ширину формы */
+    padding: 10px;       /* одинаковые отступы внутри */
+    margin-bottom: 15px; /* равномерный отступ между полями */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* учитывает padding внутри ширины */
+    font-size: 14px;
+}
+
+form input[type="submit"] {
+    background-color: #374709;
+    color: #F2F2EF;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: #212517;
+}
+
+
+/* Секции (например, на success.html) */
+section {
+    margin: 25px 0;
+    padding: 20px;
+    background: #F2F2EF;
+    border: 1px solid #DED3A6;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+section h3 {
+    margin-top: 0;
+    color: #374709;
+}
+
+/* Списки */
+ul, ol {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+ul li, ol li {
+    margin-bottom: 8px;
+    line-height: 1.5em;
+}
+
+/* Навигация внутри main (например, кнопка "Main page") */
+main nav {
+    margin-top: 25px;
+    text-align: center;
+}
+
+main nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background-color: #374709;
+    color: #F2F2EF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main nav a:hover {
+    background-color: #212517;
+    color: #F2F2EF;
+}
+
+
+/* Дата рождения */
+form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+    color: #212517;
+}
+
+form input[type="date"]:focus {
+    outline: none;
+    border-color: #374709;
+    box-shadow: 0 0 6px #374709;
+}
+
+/* Выбор страны */
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #fff;
+    color: #212517;
+    appearance: none; /* убирает стандартный стрелочный стиль */
+}
+
+form select:focus {
+    outline: none;
+    border-color: #374709;
+    box-shadow: 0 0 6px #374709;
+}

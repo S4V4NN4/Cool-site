@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Main page</a> |
+            <a href="reg.html">Registration</a> |
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+    <h2>Cool Registration confirmed!</h2>
+    <h2>Welcome to our cool community <span id="userName"></span>!</h2>
+
+    <section>
+        <p>Your registration details:</p>
+        <ul>
+            <li>Cool First name: <span id="firstName"></span></li>
+            <li>Cool Last name: <span id="lastName"></span></li>
+            <li>Cool Email: <span id="email"></span></li>
+            <li>Days until your cool birthday: <span id="daysUntilBirthday"></span></li>
+            <li>Cool Country: <span id="country"></span></li>
+        </ul>
+    </section>
+
+    <section>
+            <h3>What’s next?</h3>
+            <ul>
+                <li>Explore our <a href="index.html"> cool main page</a>.</li>
+                <li>Learn more <a href="about.html">about the cool project</a>.</li>
+                <li>Stay tuned for cool updates via email.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Tips for new cool users</h3>
+            <p>Here’s how to get started:</p>
+            <ol>
+                <li>Start being cool!</li>
+                <li>Start exploring our cool features and cool content.</li>
+            </ol>
+        </section>
+
+    <nav><a href="index.html">Main page</a></nav>
+    </main>
+
+    <footer>
+        <p>&copy; Our cool site. We know our rights.</p>
+        <p>Contact cool devs: psoup.studio@gmail.com</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById('userName').textContent = params.get('firstName') || '';
+        document.getElementById('firstName').textContent = params.get('firstName') || '';
+        document.getElementById('lastName').textContent = params.get('lastName') || '';
+        document.getElementById('email').textContent = params.get('email') || '';
+        document.getElementById('birthDate').textContent = params.get('birthDate') || '';
+        document.getElementById('country').textContent = params.get('country') || '';
+
+        const today = new Date();
+        const birthDate = new Date(params.get('birthDate'));
+        
+        let nextBirthday = new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+
+        if (nextBirthday < today) 
+        {
+            nextBirthday.setFullYear(today.getFullYear() + 1);
+        }
+
+        const diffDays = Math.ceil((nextBirthday - today) / (1000 * 60 * 60 * 24));
+
+        document.getElementById('daysUntilBirthday').textContent = diffDays;
+    </script>
+</body>
+</html>
