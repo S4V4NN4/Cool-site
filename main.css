@@ -254,3 +254,37 @@ form select:focus {
     border-color: #374709;
     box-shadow: 0 0 6px #374709;
 }
+
+.fill
+{
+    background-image: url(man.jpg);
+    position: relative();
+    height: 300px;
+    width: 300px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+.empty
+{
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    border: 3px;
+    background-color: white;
+}
+
+.hold {
+    border: solid 2px #374709;
+}
+
+.invisible {
+    display: none;
+}
+
+.hovered {
+    background-color: #DED3A6;
+    border: dashed 2px #374709;
+}
