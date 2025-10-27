@@ -54,29 +54,6 @@
         <p>Contact cool devs: psoup.studio@gmail.com</p>
     </footer>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-
-        document.getElementById('userName').textContent = params.get('firstName') || '';
-        document.getElementById('firstName').textContent = params.get('firstName') || '';
-        document.getElementById('lastName').textContent = params.get('lastName') || '';
-        document.getElementById('email').textContent = params.get('email') || '';
-        document.getElementById('birthDate').textContent = params.get('birthDate') || '';
-        document.getElementById('country').textContent = params.get('country') || '';
-
-        const today = new Date();
-        const birthDate = new Date(params.get('birthDate'));
-        
-        let nextBirthday = new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate());
-
-        if (nextBirthday < today) 
-        {
-            nextBirthday.setFullYear(today.getFullYear() + 1);
-        }
-
-        const diffDays = Math.ceil((nextBirthday - today) / (1000 * 60 * 60 * 24));
-
-        document.getElementById('daysUntilBirthday').textContent = diffDays;
-    </script>
+    <script src="success.js"></script>
 </body>
 </html>

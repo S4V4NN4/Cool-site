@@ -61,11 +61,43 @@
             <option value="Other">Other</option>
         </select>
     </div>
-    
+        
+    <div class="radio-group">
+        <p>Where to save your data:</p>
+
+        <div class="radio-option">
+            <input type="radio" id="saveLocal" name="saveOption" value="local" required>
+            <label for="saveLocal">Save using localStorage</label>
+        </div>
+        
+        <div class="radio-option">
+            <input type="radio" id="saveSession" name="saveOption" value="session">
+            <label for="saveSession">Save using SessionStorage</label>
+        </div>
+
+        <div class="radio-option">
+            <input type="radio" id="saveURL" name="saveOption" value="url">
+            <label for="saveURL">Save using URL query</label>
+        </div>
+
+        <div class="radio-option">
+            <input type="radio" id="saveCookie" name="saveOption" value="cookie">
+            <label for="saveCookie">Save using Cookies</label>
+        </div>
+
+        <div class="radio-option">
+            <input type="radio" id="indexeddb" name="saveOption" value="indexeddb">
+            <label for="indexeddb">Save using indexDB</label>
+        </div>
+    </div>
+
+
+
     <div>
         <button type="button" onclick="resetForm()">Reset</button>
         <button type="submit">Submit</button>
     </div>
+
 </form>
 
 

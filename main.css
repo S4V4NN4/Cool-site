@@ -259,8 +259,8 @@ form select:focus {
 {
     background-image: url(man.jpg);
     position: relative();
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     top: 5px;
     left: 5px;
     cursor: pointer;
@@ -269,8 +269,8 @@ form select:focus {
 .empty
 {
     display: inline-block;
-    height: 300px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     margin: 10px;
     border: 3px;
     background-color: white;
@@ -287,4 +287,60 @@ form select:focus {
 .hovered {
     background-color: #DED3A6;
     border: dashed 2px #374709;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 столбца */
+    gap: 20px;
+    justify-content: center;  /* выравнивание сетки по центру */
+    margin: 40px auto;
+    max-width: 1300px;        /* ограничивает ширину */
+    padding: 0 20px;          /* небольшие отступы по бокам */
+}
+
+/* Радиокнопки (выбор способа сохранения данных) */
+form .radio-group {
+    margin-bottom: 20px;
+}
+
+form .radio-group p {
+    font-weight: bold;
+    color: #212517;
+    margin-bottom: 10px;
+}
+
+form .radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+form .radio-option input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #374709;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+form .radio-option input[type="radio"]:checked {
+    background-color: #374709;
+    box-shadow: 0 0 0 3px #DED3A6 inset;
+}
+
+form .radio-option input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #374709;
+}
+
+form .radio-option label {
+    color: #212517;
+    font-size: 15px;
+    cursor: pointer;
 }
