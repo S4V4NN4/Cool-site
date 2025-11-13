@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> <meta charset="UTF-8">
+        <title>Choose Your Cool Qualities</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Main page</a> |
+            <a href="reg.html">Registration</a> |
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Choose Your Cool Qualities 😎</h2>
+        <p>Select what makes you *cool* — and we’ll save it for you!</p>
+        <form id="coolForm">
+            <div>
+                <label for="qualityInput">Select a cool quality:</label>
+                <select id="qualityInput" name="qualityInput" required>
+                    <option value="">Select your quality</option>
+                    <option value="Cool">Cool</option>
+                    <option value="Super cool">Super cool</option>
+                    <option value="Mega cool">Mega cool</option>
+                    <option value="Giga cool">Giga cool</option>
+                    <option value="Ultra cool">Ultra cool</option>
+                </select>
+            </div>
+            <button type="button" id="addBtn">Add quality</button>
+            <button type="button" id="clearBtn">Clear all</button>
+        </form>
+
+        <section>
+            <h3>Your Cool Qualities</h3>
+            <ul id="coolList"></ul>
+        </section>
+</main>
+
+    <footer>
+        <p>&copy; Our cool site. We know our rights.</p>
+        <p>Contact cool devs: psoup.studio@gmail.com</p>
+    </footer>
+    <script src="cool.js"></script>
+    </body>
+</html>

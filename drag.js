@@ -3,13 +3,11 @@ const empties = document.querySelectorAll('.empty');
 
 let draggedItem = null;
 
-// Обработчики событий для перетаскиваемого элемента
 for (const fill of fills) {
     fill.addEventListener('dragstart', dragStart);
     fill.addEventListener('dragend', dragEnd);
 }
 
-// Для каждой пустой зоны добавляем события
 for (const empty of empties) {
     empty.addEventListener('dragover', dragOver);
     empty.addEventListener('dragenter', dragEnter);
