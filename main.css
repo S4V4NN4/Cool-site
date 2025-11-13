@@ -344,3 +344,63 @@ form .radio-option label {
     font-size: 15px;
     cursor: pointer;
 }
+
+
+.header-content {
+    text-align: left;
+}
+
+
+/* ====== 📱 Маленькие экраны (телефоны) ====== */
+@media (max-width: 768px) {
+    .header-content {
+        text-align: center;
+        nav {
+            display: none;
+        }
+    }
+}
+
+/* ====== 💻 Средние экраны (планшеты) ====== */
+@media (min-width: 601px) and (max-width: 900px) {
+    header {
+        text-align: center;
+    }
+
+    nav a {
+        margin: 6px;
+        padding: 8px 10px;
+    }
+
+    main {
+        margin: 30px 20px;
+        padding: 20px;
+    }
+
+    .board {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+/* ====== 🖥 Большие экраны (настольные) ====== */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1000px;
+    }
+
+    .board {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+
+    button {
+        font-size: 1.1em;
+        padding: 12px 24px;
+    }
+}
+
