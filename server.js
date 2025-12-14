@@ -4,7 +4,7 @@ const { MongoClient } = require('mongodb');
 const app = express();
 const port = 3000;
 const connectionString = 'mongodb://localhost:27017';
-const dbName = 'usersdb'; // Имя базы данных - правильное
+const dbName = 'usersdb';
 
 app.use(express.json());
 app.use(express.static(__dirname)); 
@@ -24,7 +24,6 @@ app.post('/submit-to-mongo', async (req, res) => {
         await client.connect();
         const db = client.db(dbName);
         
-        // ИСПРАВЛЕНО: Используем имя коллекции из Compass - 'Merch'
         const collection = db.collection('users'); 
 
         await collection.insertOne(userData);

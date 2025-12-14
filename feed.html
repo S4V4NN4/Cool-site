@@ -62,15 +62,6 @@
             </select>
         </div>
             
-        <div class="radio-group">
-            <p>Where to save your data:</p>
-
-            <div class="radio-option">
-                <input type="radio" id="saveMongo" name="saveOption" value="mongodb" checked> <!-- Добавил 'checked', чтобы было выбрано по умолчанию -->
-                <label for="saveMongo">Save using MongoDB</label>
-            </div>
-        </div>
-
         <div>
             <button type="submit">Submit</button>
         </div>
@@ -89,21 +80,8 @@
         const responseMsg = document.getElementById('response-message');
 
         myForm.addEventListener('submit', async (event) => {
-            // event.preventDefault() нужно вызывать в любом случае, чтобы управлять отправкой
             event.preventDefault(); 
 
-            const saveOptionRadio = document.querySelector('input[name="saveOption"]:checked');
-            
-            // Проверка, выбрана ли вообще какая-либо опция
-            if (!saveOptionRadio) {
-                responseMsg.textContent = 'Please select a save option.';
-                responseMsg.style.color = 'salmon';
-                return; // Прерываем выполнение
-            }
-
-            const saveOption = saveOptionRadio.value;
-            
-            if (saveOption === 'mongodb') {
                 const formData = new FormData(myForm);
                 const data = Object.fromEntries(formData.entries());
 
@@ -119,7 +97,6 @@
 
                     if (result.success) {
                         responseMsg.style.color = 'lightgreen';
-                        // Через 1.5 секунды перенаправляем на success.html
                         setTimeout(() => {
                             window.location.href = 'success.html';
                         }, 1500); 
@@ -130,14 +107,6 @@
                     responseMsg.textContent = 'Ошибка отправки на сервер.';
                     responseMsg.style.color = 'salmon';
                 }
-            } else {
-                // Если выбрана не MongoDB, можно либо ничего не делать,
-                // либо вызвать старую логику, если она есть.
-                // Сейчас просто скажем, что эта опция не реализована.
-                console.log('Другая опция сохранения, наш скрипт ее не обрабатывает.');
-                // Если у друга был старый script.js, он должен был бы сработать здесь.
-                // Но для чистоты эксперимента, лучше оставить так.
-            }
         });
     </script>
 </body>
